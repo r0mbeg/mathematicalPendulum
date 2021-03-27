@@ -3,7 +3,7 @@ from math import sin, cos, sqrt, pi
 from tkinter import *
 #from PIL import ImageTk, Image
 
-g = 3
+g = 9.87
 
 class MathematicalPendulum:
     def __init__(self, radius, mass, length, color, angle, angle_velocity, k):
@@ -58,9 +58,10 @@ def sub(point_1, point_2):
 
 
 def update_angle(pendulum):
-    pendulum.accelaration = -2 * pendulum.gamma * pendulum.angle_velocity - (pendulum.omega_0 ** 2) * sin(pendulum.angle)
-    pendulum.angle_velocity = pendulum.angle_velocity + pendulum.angle_acceleration
-    pendulum.angle = pendulum.angle + pendulum.angle_velocity
+    pendulum.accelaration = - 2 * pendulum.gamma * pendulum.angle_velocity - (pendulum.omega_0 ** 2) * sin(pendulum.angle)
+    pendulum.angle_velocity = pendulum.angle_velocity + 0.1*pendulum.angle_acceleration
+    #pendulum.angle_velocity *= 0.99
+    pendulum.angle = pendulum.angle + 0.1*pendulum.angle_velocity
     return pendulum.angle, pendulum.angle_velocity, pendulum.accelaration
 
 
@@ -154,11 +155,11 @@ label_velocity_dimension = Label(root, text="°/sec", font='bold')
 label_velocity_dimension.place(x=83, y=226)
 
 
-scheme = PhotoImage(file="scheme.png")
-scheme_label = Label(root)
-scheme_label.image = scheme
-scheme_label['image'] = scheme_label.image
-scheme_label.place(x=120, y=10)
+#scheme = PhotoImage(file="scheme.png")
+#scheme_label = Label(root)
+#scheme_label.image = scheme
+#scheme_label['image'] = scheme_label.image
+#scheme_label.place(x=120, y=10)
 
 
 btn_run = Button(root, text='RUN', font='Bold')
@@ -170,18 +171,20 @@ btn_run.place(x=20, y=255, width=100)
 
 root.mainloop()
 
-
-
-
-
 # Window drawing
 SIZE_X = 800
 SIZE_Y = 800
 window = gr.GraphWin("Pendulum", SIZE_X, SIZE_Y)
 
 
+
+
 #Window's center:
 center_point = gr.Point(SIZE_X / 2, SIZE_Y / 2)
+
+
+
+
 
 #Creating MathematicalPendulum object with parameters form entry fields
 pendulum = MathematicalPendulum(float(entry_radius.get()), float(entry_mass.get()),
@@ -189,7 +192,9 @@ pendulum = MathematicalPendulum(float(entry_radius.get()), float(entry_mass.get(
                                 ((pi * float(entry_angle.get()))/180),  ((pi * float(entry_velocity.get()))/180), 0.1)
 pendulum.circle = drawBall(pendulum.coords, pendulum.r, pendulum.color)
 pendulum.circle.setWidth(2)
-root.destroy()
+
+
+
 
 while True:
     moving(pendulum)
@@ -198,7 +203,8 @@ while True:
                center_point.y + (pendulum.l-pendulum.r) * cos(pendulum.angle))
 
     pendulum.line = drawLine(center_point, line_coords, "black")
+    #pendulum.line1 = drawLine(center_point, line_coords, "red")
     pendulum.line.setWidth(2)
-    gr.time.sleep(0.0001)
+    gr.time.sleep(0.000000001)
     pendulum.line.undraw()
 
