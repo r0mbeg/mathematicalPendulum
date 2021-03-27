@@ -84,7 +84,7 @@ def moving(pendulum):
 # creating of tkinter window
 root = Tk()
 root.title('Start settings')
-root.geometry('350x300')
+root.geometry('150x300')
 root.resizable(0, 0)
 
 
@@ -199,8 +199,6 @@ while True:
 
     pendulum.line = drawLine(center_point, line_coords, "black")
     pendulum.line.setWidth(2)
-    gr.time.sleep(0.02)
+    gr.time.sleep(0.0001)
     pendulum.line.undraw()
-    if window.checkMouse():
-        break
-window.close()
+
