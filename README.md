@@ -1,6 +1,6 @@
 A model of a mathematical pendulum.
 
-To run the code you need install the graphics and tkinter libraries.
+To run the code you need install the `graphics` and `tkinter` libraries.
 
 To calculate the deflection angle we use the following differential equation:
 
