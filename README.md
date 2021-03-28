@@ -12,6 +12,12 @@ Where γ is an attenuation coefficient, omega_0 is a self-resonant frequency and
 
 Knowing the initial conditions, we can calculate the acceleration:
 
-![Image alt]https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/acceleration.png
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/acceleration.png)
 
+Next, we numerically calculate the speed and angle:
 
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/angleAndVelocity.png)
+
+When we know the angle on the new iteration, we calculate the new coordinates.
+
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/nextIteration.png)
