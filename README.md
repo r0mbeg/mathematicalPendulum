@@ -21,3 +21,7 @@ Next, we numerically calculate the speed and angle:
 When we know the angle on the new iteration, we calculate the new coordinates.
 
 ![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/nextIteration1.png)
+
+The new coordinates here are:
+
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/newCoords.png)
