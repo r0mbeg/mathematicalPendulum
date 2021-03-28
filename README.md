@@ -22,6 +22,8 @@ When we know the angle on the new iteration, we calculate the new coordinates.
 
 ![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/nextIteration1.png)
 
-The new coordinates here are:
+To move the ball to a new position, we calculate the vector v and use the `move` function:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/newCoords.png)
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulas/move.png)
+
+Repeat the iteration from the acceleration calculation.
