@@ -12,4 +12,4 @@ When all the parameters are configured, click "RUN":
 
 ![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/RUN.png)
 
-
+#Mathematical description
