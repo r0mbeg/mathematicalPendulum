@@ -9,7 +9,9 @@ After you have run the file `mathematicalPendulum.py` you will see a window:
 In this window, you can configure the parameters of the pendulum - the color of the ball, the mass of the ball, the radius of the ball, the length of the thread, the initial angle and the initial angular velocity.
 
 When all the parameters are configured, click "RUN":
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/Pendulum.gif.png)
+
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/Pendulum.gif)
+
 ![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
 
 # Mathematical description
