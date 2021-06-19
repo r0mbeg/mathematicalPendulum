@@ -42,4 +42,6 @@ To move the ball to a new position, we calculate the vector v and use the `move`
 
 Repeat the iteration from the acceleration calculation.
 
+![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
+
 
