@@ -12,8 +12,6 @@ When all the parameters are configured, click "RUN":
 
 ![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/Pendulum.gif)
 
-![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
-
 # Mathematical description
 
 To calculate the deflection angle we use the following differential equation:
