@@ -10,7 +10,7 @@ In this window, you can configure the parameters of the pendulum - the color of 
 
 When all the parameters are configured, click "RUN":
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/Pendulum.gif)
+![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/Pendulum (1).gif)
 
 # Mathematical description
 
