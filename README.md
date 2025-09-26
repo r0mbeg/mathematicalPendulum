@@ -16,29 +16,29 @@ When all the parameters are configured, click "RUN":
 
 To calculate the deflection angle we use the following differential equation:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/equation.png)
+$$\ddot{\alpha}+2\gamma\dot{\alpha}+\omega_0^2\sin\alpha=0$$
 
 Where γ is an attenuation coefficient, omega_0 is a self-resonant frequency and k - is resistance coefficient:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/gammaAndOmega0.png)
+$$\gamma=\frac{k}{m} \quad \omega_0=\sqrt{\frac{g}{l}}$$
 
 Knowing the initial conditions, we can calculate the acceleration:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/acceleration.png)
+$$\ddot{\alpha}=-2\gamma\dot{\alpha}-\omega_0^2\sin\alpha$$
 
 Next, we numerically calculate the speed and angle:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/angleAndVelocity.png)
+$$\dot{\alpha}_{new}=\dot{\alpha}_{old}+0.99\cdot\ddot{\alpha}\quad\alpha_{new}=\alpha_{old}+0.99\cdot\dot{\alpha}$$
 
 When we know the angle on the new iteration, we calculate the new coordinates:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/newCoords.png)
+$$(x_{new}, y_{new})=(x_c+l\cdot\alpha, y_c+l\cdot\alpha)$$
 
 ![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/nextIteration1.png)
 
 To move the ball to a new position, we calculate the vector v and use the `move` function:
 
-![Image alt](https://github.com/r0mbeg/mathematicalPendulum/blob/main/pendulumFormulasAndImages/move.png)
+$$(v_x,v_y)=(x_{new},y_{new})-(x_{old},y_{old})$$
 
 Repeat the iteration from the acceleration calculation.
 
